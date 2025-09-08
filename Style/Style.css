@@ -56,7 +56,9 @@ li {
     width: 100%;
     height: 25rem;
     background-color: black;
-    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .Menu {
@@ -64,15 +66,15 @@ li {
     justify-content: center;
     font-size: 6rem;
     gap: 20rem;
+}
 
-    & a {
-        text-decoration: none;
-        color: white;
-    }
+.Menu a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
 }
 
 .Menu a:hover {
-    transition: 1s;
     font-size: 8rem;
     text-decoration: underline;
 }
@@ -89,26 +91,26 @@ li {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
 
-    & h1 {
-        font-size: 25rem;
-        margin-bottom: 2rem;
-    }
+.Titulo h1 {
+    font-size: 25rem;
+    margin-bottom: 2rem;
+}
 
-    & p {
-        font-size: 5rem;
-        width: 70%;
-    }
+.Titulo p {
+    font-size: 5rem;
+    width: 70%;
 }
 
 .ImagemTitulo {
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
-    & img {
-        width: 45%;
-    }
+.ImagemTitulo img {
+    width: 45%;
 }
 
 .Grid {
@@ -129,12 +131,12 @@ li {
     justify-content: center;
     align-items: center;
     gap: 5rem;
+}
 
-    & img {
-        height: 60rem;
-        width: 80%;
-        border-radius: 3rem;
-    }
+.Imagens img {
+    height: 60rem;
+    width: 80%;
+    border-radius: 3rem;
 }
 
 .SessaoGaleria {
@@ -148,21 +150,21 @@ li {
 
 .GaleriaGrid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 5rem;
+}
 
-    & img {
-        width: 100rem;
-        height: 60rem;
-        border-radius: 3rem;
-    }
+.GaleriaGrid img {
+    width: 100rem;
+    height: 60rem;
+    border-radius: 3rem;
+    transition: all 0.3s ease;
 }
 
 .GaleriaGrid img:hover {
     width: 120rem;
     height: 70rem;
-    transition: 1s;
 }
 
 .HardwareGrid {
@@ -175,11 +177,11 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
-    & img {
-        width: 60%;
-        border-radius: 3rem;
-    }
+.ImagemHardware img {
+    width: 60%;
+    border-radius: 3rem;
 }
 
 .HardwareUm {
@@ -213,16 +215,16 @@ li {
     align-items: center;
     gap: 2rem;
     text-align: center;
+}
 
-    & h2 {
-        font-size: 8rem;
-        margin: 0;
-    }
+.Membro h2 {
+    font-size: 8rem;
+    margin: 0;
+}
 
-    & p {
-        font-size: 5rem;
-        margin: 0;
-    }
+.Membro p {
+    font-size: 5rem;
+    margin: 0;
 }
 
 .Membro img {
@@ -244,7 +246,7 @@ li {
 
 .Rodape {
     display: flex;
-    gap: 200rem
+    gap: 200rem;
 }
 
 .Rodape h1 {
