@@ -1,3 +1,13 @@
+:root {
+    --cor-branco: white;
+    --cor-preto: black;
+
+    --border-radius: 3rem;
+    --gap-grande: 5rem;
+    --gap-medio: 4rem;
+    --gap-pequeno: 2rem;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -32,21 +42,21 @@ li {
 }
 
 .Branco {
-    background-color: white;
+    background-color: var(--cor-branco);
 }
 
 .Preto {
-    background-color: black;
+    background-color: var(--cor-preto);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .Sessao {
-    background-color: white;
+    background-color: var(--cor-branco);
     width: 90%;
     height: 90%;
-    border-radius: 3rem;
+    border-radius: var(--border-radius);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,7 +65,7 @@ li {
 .FundoMenu {
     width: 100%;
     height: 25rem;
-    background-color: black;
+    background-color: var(--cor-preto);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,7 +80,7 @@ li {
 
 .Menu a {
     text-decoration: none;
-    color: white;
+    color: var(--cor-branco);
     transition: all 0.3s ease;
 }
 
@@ -130,13 +140,13 @@ li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
+    gap: var(--gap-grande);
 }
 
 .Imagens img {
     height: 60rem;
     width: 80%;
-    border-radius: 3rem;
+    border-radius: var(--border-radius);
 }
 
 .SessaoGaleria {
@@ -144,7 +154,7 @@ li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
+    gap: var(--gap-grande);
     margin-top: 10rem;
 }
 
@@ -152,13 +162,13 @@ li {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 5rem;
+    gap: var(--gap-grande);
 }
 
 .GaleriaGrid img {
     width: 100rem;
     height: 60rem;
-    border-radius: 3rem;
+    border-radius: var(--border-radius);
     transition: all 0.3s ease;
 }
 
@@ -181,7 +191,7 @@ li {
 
 .ImagemHardware img {
     width: 60%;
-    border-radius: 3rem;
+    border-radius: var(--border-radius);
 }
 
 .HardwareUm {
@@ -197,14 +207,14 @@ li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
+    gap: var(--gap-grande);
 }
 
 .EquipeGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 4rem;
+    gap: var(--gap-medio);
 }
 
 .Membro {
@@ -213,7 +223,7 @@ li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: var(--gap-pequeno);
     text-align: center;
 }
 
@@ -230,14 +240,14 @@ li {
 .Membro img {
     width: 50rem;
     height: 50rem;
-    border-radius: 3rem;
+    border-radius: var(--border-radius);
     object-fit: cover;
 }
 
 .FundoRodape {
     width: 100%;
     height: 50rem;
-    background-color: black;
+    background-color: var(--cor-preto);
     margin-top: 30rem;
     display: flex;
     justify-content: center;
@@ -250,7 +260,7 @@ li {
 }
 
 .Rodape h1 {
-    color: white;
+    color: var(--cor-branco);
     font-size: clamp(5rem, 5vw + 2rem, 13rem);
     font-weight: bold;
 }
@@ -262,6 +272,6 @@ li {
 }
 
 .RodapeLinks a {
-    color: white;
+    color: var(--cor-branco);
     font-size: clamp(5rem, 5vw + 2rem, 13rem);
 }
