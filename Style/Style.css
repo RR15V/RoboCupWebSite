@@ -33,6 +33,9 @@ html {
     width: 90%;
     height: 90%;
     border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .FundoMenu {
@@ -87,5 +90,38 @@ html {
     align-items: center;
     & img {
         width: 45%;
+    }
+}
+
+.RoboGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.Texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & h1 {
+        font-size: 15rem;
+        margin-bottom: 2rem;
+    }
+    & p {
+        font-size: 5rem;
+        width: 70%;
+    }
+}
+
+.Imagens {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    & img {
+        height: 60rem;
+        width: 80%;
+        border-radius: 3rem;
     }
 }
