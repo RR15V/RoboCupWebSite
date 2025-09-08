@@ -16,6 +16,7 @@ h1 {
     font-size: 15rem;
     margin-bottom: 4rem;
 }
+
 p {
     font-size: 5rem;
     width: 70%;
@@ -25,7 +26,7 @@ li {
     font-size: 5rem;
 }
 
-.Container { 
+.Container {
     width: 100%;
     height: 100vh;
 }
@@ -63,6 +64,7 @@ li {
     justify-content: center;
     font-size: 6rem;
     gap: 20rem;
+
     & a {
         text-decoration: none;
         color: white;
@@ -87,10 +89,12 @@ li {
     justify-content: center;
     align-items: center;
     text-align: center;
+
     & h1 {
         font-size: 25rem;
         margin-bottom: 2rem;
     }
+
     & p {
         font-size: 5rem;
         width: 70%;
@@ -101,6 +105,7 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
+
     & img {
         width: 45%;
     }
@@ -124,6 +129,7 @@ li {
     justify-content: center;
     align-items: center;
     gap: 5rem;
+
     & img {
         height: 60rem;
         width: 80%;
@@ -145,6 +151,7 @@ li {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 5rem;
+
     & img {
         width: 100rem;
         height: 60rem;
@@ -168,6 +175,7 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
+
     & img {
         width: 60%;
         border-radius: 3rem;
@@ -205,10 +213,12 @@ li {
     align-items: center;
     gap: 2rem;
     text-align: center;
+
     & h2 {
         font-size: 8rem;
         margin: 0;
     }
+
     & p {
         font-size: 5rem;
         margin: 0;
@@ -220,4 +230,36 @@ li {
     height: 50rem;
     border-radius: 3rem;
     object-fit: cover;
+}
+
+.FundoRodape {
+    width: 100%;
+    height: 50rem;
+    background-color: black;
+    margin-top: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Rodape {
+    display: flex;
+    gap: 200rem
+}
+
+.Rodape h1 {
+    color: white;
+    font-size: 13rem;
+    font-weight: bold;
+}
+
+.RodapeLinks {
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+}
+
+.RodapeLinks a {
+    color: white;
+    font-size: 13rem;
 }
