@@ -1,0 +1,36 @@
+:root {
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.Container { 
+    width: 100%;
+    height: 100vh;
+}
+
+.Branco {
+    background-color: white;
+}
+
+.Preto {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Sessao {
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    border-radius: 3rem;
+}
