@@ -93,7 +93,9 @@ a:hover{
 }
 
 .Branco {
-    background-color: var(--cor-branco);
+    background-image: url(../Imagens/telaCheia.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .Preto {
@@ -141,6 +143,7 @@ a:hover{
     justify-content: center;
     align-items: center;
     text-align: center;
+    color: var(--cor-branco);
 
     & h1 {
         font-size: var(--fs-h1-grande);
@@ -196,6 +199,7 @@ a:hover{
     align-items: center;
     gap: var(--gap-grande);
     margin-top: var(--altura-mt);
+    color: var(--cor-branco);
 }
 
 .GaleriaGrid {
@@ -238,6 +242,7 @@ a:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: var(--cor-branco);
     & h1{
         margin-top: var(--altura-mt);
     }
@@ -266,10 +271,12 @@ a:hover{
     align-items: center;
     gap: var(--gap-pequeno);
     text-align: center;
+    color: var(--cor-branco);
 
     & h2 {
         font-size: var(--fs-h2);
         margin-bottom: 1rem;
+        color: var(--cor-branco);
     }
 
     & p {
