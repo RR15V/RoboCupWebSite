@@ -1,45 +1,37 @@
 :root {
-    /* Cores */
     --cor-branco: #fff;
     --cor-preto: #000;
 
-    /* Espaçamento e bordas */
     --border-radius: 1rem;
     --gap-grande: 2rem;
     --gap-medio: 1rem;
     --gap-pequeno: 0.5rem;
 
-    /* Fonte */
     --fonte-principal: 'DM Sans', sans-serif;
 
-    /* Tamanhos de texto */
     --fs-h1: clamp(3rem, 5vw, 6rem);
     --fs-h1-grande: clamp(4rem, 7vw, 8rem);
     --fs-h2: clamp(2rem, 3.5vw, 4rem);
     --fs-texto: clamp(1.2rem, 2vw, 3rem);
     --fs-menu: clamp(1.5rem, 2.5vw, 2.5rem);
-    --fs-menu-hover: clamp(2rem, 3vw, 3rem);   
+    --fs-menu-hover: clamp(2rem, 3vw, 3rem);
     --fs-rodape: clamp(2.5rem, 4vw, 6rem);
 
-    /* Containers */
     --largura-container: 100%;
     --altura-container: 100vh;
     --altura-menu: 10rem;
     --altura-rodape: 16rem;
     --altura-mt: 3rem;
 
-    /* Imagens */
     --largura-img-pequena: 38rem;
     --altura-img-pequena: 28rem;
     --largura-img-media: 42rem;
     --altura-img-media: 32rem;
 
-    /* Iframe */
     --largura-iframe-desktop: 100rem;
     --altura-iframe: 20rem;
 }
 
-/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -55,13 +47,13 @@ body {
     font-family: var(--fonte-principal);
 }
 
-/* Tipografia */
 h1 {
     font-size: var(--fs-h1);
     margin-bottom: 2rem;
 }
 
-p, li {
+p,
+li {
     font-size: var(--fs-texto);
 }
 
@@ -69,7 +61,6 @@ p {
     width: 70%;
 }
 
-/* Links */
 a {
     text-decoration: none;
     color: var(--cor-branco);
@@ -86,14 +77,9 @@ iframe {
     height: var(--altura-iframe);
 }
 
-/* Containers */
 .Container {
     width: var(--largura-container);
     height: var(--altura-container);
-}
-
-.ContainerXMedia {
-    height: 65rem;
 }
 
 .Branco {
@@ -117,7 +103,6 @@ iframe {
     align-items: center;
 }
 
-/* Menu */
 .FundoMenu {
     width: var(--largura-container);
     height: var(--altura-menu);
@@ -134,7 +119,6 @@ iframe {
     gap: 8rem;
 }
 
-/* Sessões principais */
 .TituloGrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -196,7 +180,6 @@ iframe {
     border-radius: var(--border-radius);
 }
 
-/* Galeria */
 .SessaoGaleria {
     display: flex;
     flex-direction: column;
@@ -229,7 +212,6 @@ iframe {
     height: var(--altura-img-media);
 }
 
-/* Hardware */
 .HardwareGrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -259,7 +241,6 @@ iframe {
     margin-top: var(--altura-mt);
 }
 
-/* Vídeos */
 .SessaoVideos {
     display: flex;
     flex-direction: column;
@@ -268,7 +249,6 @@ iframe {
     gap: var(--gap-grande);
 }
 
-/* Equipe */
 .EquipeGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -304,7 +284,6 @@ iframe {
     margin-top: 2rem;
 }
 
-/* Rodapé */
 .FundoRodape {
     width: var(--largura-container);
     height: var(--altura-rodape);
@@ -336,11 +315,137 @@ iframe {
     font-size: var(--fs-rodape);
 }
 
-/* Responsivo */
-@media (max-width: 2560px) {}
-@media (max-width: 1440px) {}
-@media (max-width: 1024px) {}
-@media (max-width: 768px) {}
-@media (max-width: 425px) {}
-@media (max-width: 375px) {}
-@media (max-width: 320px) {}
+@media (max-width: 2560px) {
+
+    .HardwareGrid,
+    .Grid,
+    .TituloGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .GaleriaGrid,
+    .EquipeGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .Container {
+        height: var(--altura-container);
+    }
+
+    iframe {
+        width: 80rem;
+        height: 50rem;
+    }
+}
+
+@media (max-width: 1440px) {
+
+    .HardwareGrid,
+    .Grid,
+    .TituloGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .GaleriaGrid,
+    .EquipeGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .Container {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    iframe {
+        width: 80rem;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .HardwareGrid,
+    .Grid,
+    .TituloGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .GaleriaGrid,
+    .EquipeGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .Container {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    iframe {
+        width: 60rem;
+    }
+
+    .Menu {
+        gap: 6rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .EquipeGrid,
+    .HardwareGrid,
+    .Grid,
+    .TituloGrid,
+    .GaleriaGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .Container {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    iframe {
+        width: 30rem;
+    }
+
+    .Menu {
+        gap: 4rem;
+    }
+
+    .Rodape {
+        gap: 40rem;
+    }
+}
+
+@media (max-width: 426px) {
+
+    .EquipeGrid,
+    .HardwareGrid,
+    .Grid,
+    .TituloGrid,
+    .GaleriaGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .Container {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    iframe {
+        width: 20rem;
+    }
+
+    .Menu {
+        gap: 8px;
+    }
+
+    .Rodape {
+        gap: 10rem;
+    }
+
+    .GaleriaGrid img {
+        width: 30rem;
+        height: 30rem;
+    }
+}
