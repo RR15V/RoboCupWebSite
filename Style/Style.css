@@ -36,6 +36,12 @@ li {
     font-size: clamp(2rem, 2vw + 1rem, 5rem);
 }
 
+iframe {
+    width: 2500px;
+    height: 550px;
+    border-radius: var(--border-radius);
+}
+
 .Container {
     width: 100%;
     height: 100vh;
@@ -76,6 +82,7 @@ li {
     justify-content: center;
     font-size: clamp(3rem, 2vw + 2rem, 6rem);
     gap: 20rem;
+
     & a {
         text-decoration: none;
         color: var(--cor-branco);
@@ -100,10 +107,12 @@ li {
     justify-content: center;
     align-items: center;
     text-align: center;
+
     & h1 {
         font-size: clamp(10rem, 6vw + 2rem, 25rem);
         margin-bottom: 2rem;
     }
+
     & p {
         font-size: clamp(2rem, 2vw + 1rem, 5rem);
         width: 70%;
@@ -114,6 +123,7 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
+
     & img {
         width: 45%;
     }
@@ -137,6 +147,7 @@ li {
     justify-content: center;
     align-items: center;
     gap: var(--gap-grande);
+
     & img {
         height: 60rem;
         width: 80%;
@@ -158,6 +169,7 @@ li {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: var(--gap-grande);
+
     & img {
         width: 100rem;
         height: 60rem;
@@ -181,6 +193,7 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
+
     & img {
         width: 60%;
         border-radius: var(--border-radius);
@@ -218,14 +231,17 @@ li {
     align-items: center;
     gap: var(--gap-pequeno);
     text-align: center;
+
     & h2 {
         font-size: clamp(4rem, 3vw + 2rem, 8rem);
         margin: 0;
     }
+
     & p {
         font-size: clamp(2rem, 1.5vw + 1rem, 5rem);
         margin: 0;
     }
+
     & img {
         width: 50rem;
         height: 50rem;
@@ -247,6 +263,7 @@ li {
 .Rodape {
     display: flex;
     gap: 200rem;
+
     & h1 {
         color: var(--cor-branco);
         font-size: clamp(5rem, 5vw + 2rem, 13rem);
@@ -258,8 +275,95 @@ li {
     display: flex;
     justify-content: center;
     gap: 8rem;
+
     & a {
         color: var(--cor-branco);
         font-size: clamp(5rem, 5vw + 2rem, 13rem);
+    }
+}
+
+@media (width <=3024px) {
+    .Menu {
+        gap: 10rem;
+    }
+
+    .GaleriaGrid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: var(--gap-medio);
+    }
+
+    .EquipeGrid {
+        gap: var(--gap-pequeno);
+    }
+
+    .Rodape {
+        gap: 100rem;
+    }
+
+    iframe {
+        width: 1500px;
+    }
+
+    .ContainerXMedia {
+        height: 250rem;
+    }
+}
+
+@media (width <=1768px) {
+
+    .Menu {
+        gap: 5rem;
+    }
+
+    .TituloGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .Grid {
+        grid-template-columns: 1fr;
+    }
+
+    .GaleriaGrid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .HardwareGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .EquipeGrid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .Rodape {
+        gap: 50rem;
+    }
+
+    .Container {
+        width: 100%;
+        height: 260rem;
+    }
+
+    iframe {
+        width: 1000px;
+    }
+
+    .h1XMedia h1 {
+        margin-top: 10rem;
+    }
+
+    .pXMedia p {
+        margin-bottom: 10rem;
+    }
+
+    .HardwareDois ul {
+        margin-bottom: 10rem;
+    }
+
+    .ContainerXMedia {
+        height: 420rem;
     }
 }
