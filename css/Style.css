@@ -1,5 +1,5 @@
 :root {
-    --cor-branco: white;
+    --cor-branco: rgb(255, 255, 255);
     --cor-preto: black;
 
     --border-radius: 1rem;
@@ -218,30 +218,29 @@ a:hover{
 }
 
 .HardwareGrid {
-    margin-top: var(--altura-mt);
     display: grid;
-    grid-template-areas: "hardwareText imagem";
+    grid-template-columns: 1fr 1fr;
 }
 
 .ImagemHardware {
-    grid-area: imagem;
     display: flex;
     justify-content: center;
     align-items: center;
-
     & img {
+        margin-top: var(--altura-mt);
         width: 60%;
         border-radius: var(--border-radius);
     }
 }
 
 .HardwareText {
-    grid-area: hardwareText;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 6rem;
+    & h1{
+        margin-top: var(--altura-mt);
+    }
 }
 
 .SessaoVideos {
@@ -316,96 +315,24 @@ a:hover{
         font-size: var(--fs-rodape);
     }
 }
-
-@media (width <=1024px) {
-    .Menu {
-        gap: 3rem;
-    }
-
-    .GaleriaGrid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto;
-        gap: var(--gap-medio);
-    }
-
-    .EquipeGrid {
-        gap: var(--gap-pequeno);
-    }
-
-    .Rodape {
-        gap: 30rem;
-    }
-
-    iframe {
-        width: var(--largura-iframe-tablet);
-    }
-
-    .ContainerXMedia {
-        height: 85rem;
-    }
+/*4K*/
+@media (width <=2560px) {
 }
-
+/*Laptop L*/
+@media (width <=1440px) {
+}
+/*Laptop*/
+@media (width <=1024px) {
+}
+/*Tablet*/
 @media (width <=768px) {
-    .Menu {
-        gap: 1.5rem;
-    }
-
-    .TituloGrid {
-        grid-template-columns: 1fr;
-    }
-
-    .Grid {
-        grid-template-columns: 1fr;
-    }
-
-    .GaleriaGrid {
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: auto;
-    }
-
-    .HardwareGrid {
-        grid-template-columns: 1fr;
-    }
-
-    .EquipeGrid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-
-    .Rodape {
-        gap: 15rem;
-    }
-
-    .Container {
-        width: var(--largura-container);
-        height: 85rem;
-    }
-
-    iframe {
-        width: var(--largura-iframe-mobile);
-    }
-
-    .h1XMedia h1 {
-        margin-top: var(--altura-mt);
-    }
-
-    .pXMedia p {
-        margin-bottom: var(--altura-mt);
-    }
-
-    .HardwareDois ul {
-        margin-bottom: var(--altura-mt);
-    }
-
-    .ContainerXMedia {
-        height: 140rem;
-    }
-
-    .ImagemHardware img {
-        height: 40rem;
-    }
-
-    .ImagemTitulo img {
-        height: 35rem;
-    }
+}
+/*Mobile L*/
+@media (width <=425px) {
+}
+/*Mobile M*/
+@media (width <=375px) {
+}
+/*Mobile S*/
+@media (width <=320px) {
 }
