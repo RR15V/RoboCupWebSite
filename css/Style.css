@@ -13,14 +13,14 @@
     --fs-h1: clamp(3rem, 5vw, 6rem);
     --fs-h1-grande: clamp(4rem, 7vw, 8rem);
     --fs-h2: clamp(2rem, 3.5vw, 3rem);
-    --fs-texto: clamp(1.2rem, 2vw, 1.5rem);
-    --fs-menu: clamp(1.5rem, 2.5vw, 2rem);
-    --fs-menu-hover: clamp(2rem, 3vw, 2.5rem);
+    --fs-texto: clamp(1.2rem, 2vw, 3rem);
+    --fs-menu: clamp(1.5rem, 2.5vw, 2.5rem);
+    --fs-menu-hover: clamp(2rem, 3vw, 3rem);
     --fs-rodape: clamp(2.5rem, 4vw, 4rem);
 
     --largura-container: 100%;
     --altura-container: 100vh;
-    --altura-menu: 8rem;
+    --altura-menu: 10rem;
     --altura-rodape: 16rem;
     --altura-mt: 3rem;
 
@@ -198,8 +198,11 @@ a:hover{
     justify-content: center;
     align-items: center;
     gap: var(--gap-grande);
-    margin-top: var(--altura-mt);
     color: var(--cor-branco);
+
+    & h1{
+        margin-top: var(--altura-mt);
+    }
 }
 
 .GaleriaGrid {
@@ -246,6 +249,8 @@ a:hover{
     & h1{
         margin-top: var(--altura-mt);
     }
+
+
 }
 
 .SessaoVideos {
@@ -295,7 +300,7 @@ a:hover{
     width: var(--largura-container);
     height: var(--altura-rodape);
     background-color: var(--cor-preto);
-    margin-top: 10rem;
+    
     display: flex;
     justify-content: center;
     align-items: center;
