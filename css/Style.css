@@ -449,3 +449,11 @@ iframe {
         height: 30rem;
     }
 }
+
+@media (max-width: 321px) {
+    .Menu {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding-left: 1rem;
+    }
+}
