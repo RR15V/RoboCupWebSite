@@ -256,6 +256,10 @@ iframe {
     gap: var(--gap-medio);
 }
 
+.Membros {
+    padding: 5rem;
+}
+
 .Membro {
     padding: 1rem;
     display: flex;
@@ -359,6 +363,17 @@ iframe {
     iframe {
         width: 80rem;
     }
+
+    .Sessao {
+        padding: 5rem;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    .TituloGrid {
+        padding-top: 5rem;
+    }
+
 }
 
 @media (max-width: 1024px) {
@@ -385,6 +400,10 @@ iframe {
 
     .Menu {
         gap: 6rem;
+    }
+
+    .SessaoGaleria {
+        padding-bottom: 5rem;
     }
 
 }
@@ -414,6 +433,18 @@ iframe {
 
     .Rodape {
         gap: 40rem;
+    }
+
+    .ImagemHardware img {
+        margin-bottom: 5rem;
+    }
+
+    .Texto h1 {
+        margin-top: 3rem;
+    }
+
+    .Texto p {
+        margin-bottom: 3rem;
     }
 }
 
