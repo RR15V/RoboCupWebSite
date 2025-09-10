@@ -10,7 +10,7 @@
     --fonte-principal: 'DM Sans', sans-serif;
 
     --fs-h1: clamp(3rem, 5vw, 6rem);
-    --fs-h1-grande: clamp(4rem, 7vw, 8rem);
+    --fs-h1-grande: clamp(4rem, 7vw, 10rem);
     --fs-h2: clamp(2rem, 3.5vw, 4rem);
     --fs-texto: clamp(1.2rem, 2vw, 3rem);
     --fs-menu: clamp(1.5rem, 2.5vw, 2.5rem);
@@ -24,9 +24,9 @@
     --altura-mt: 3rem;
 
     --largura-img-pequena: 38rem;
-    --altura-img-pequena: 28rem;
+    --altura-img-pequena: 32rem;
     --largura-img-media: 42rem;
-    --altura-img-media: 32rem;
+    --altura-img-media: 34rem;
 
     --largura-iframe-desktop: 100rem;
     --altura-iframe: 20rem;
@@ -235,6 +235,8 @@ iframe {
     justify-content: center;
     align-items: center;
     color: var(--cor-branco);
+
+
 }
 
 .HardwareText h1 {
@@ -256,8 +258,16 @@ iframe {
     gap: var(--gap-medio);
 }
 
-.Membros {
-    padding: 5rem;
+.TituloSessao {
+    display: flex;
+    justify-content: center;
+    padding-top: var(--altura-mt);
+    color: var(--cor-branco);
+    
+}
+
+.ContainerEquipe{
+    height: 130vh;
 }
 
 .Membro {
@@ -281,9 +291,13 @@ iframe {
     font-size: var(--fs-texto);
 }
 
+.Membro a{
+    font-size: var(--fs-texto);
+}
+
 .Membro img {
-    width: 16rem;
-    height: 16rem;
+    width: 30rem;
+    height: 30rem;
     border-radius: var(--border-radius);
     margin-top: 2rem;
 }
@@ -373,6 +387,10 @@ iframe {
     .TituloGrid {
         padding-top: 5rem;
     }
+    
+    .ContainerEquipe{
+        height: 170vh;
+    }
 
 }
 
@@ -404,6 +422,10 @@ iframe {
 
     .SessaoGaleria {
         padding-bottom: 5rem;
+    }
+
+    .ContainerEquipe{
+        height: 150vh;
     }
 
 }
@@ -446,6 +468,27 @@ iframe {
     .Texto p {
         margin-bottom: 3rem;
     }
+
+    .ContainerEquipe{
+        height: 230vh;
+    }
+
+    p{
+        font-size: 2rem;
+    }
+
+    li{
+        font-size: 2rem;
+    }
+
+    .Membro p{
+        font-size: 2rem;
+    }
+
+    .Membro a{
+        font-size: 1.8rem;
+    }
+
 }
 
 @media (max-width: 426px) {
@@ -479,6 +522,15 @@ iframe {
         width: 30rem;
         height: 30rem;
     }
+
+    .Imagens img {
+        width: 32rem;
+    }
+
+    .ImagemHardware img {
+        height: 35rem;
+        width: 30rem;
+    }
 }
 
 @media (max-width: 321px) {
@@ -487,4 +539,19 @@ iframe {
         grid-template-columns: repeat(4, 1fr);
         padding-left: 1rem;
     }
+
+    .Imagens img {
+        width: 26rem;
+    }
+
+    .ImagemHardware img {
+        height: 33rem;
+        width: 28rem;
+    }
+
+    p{
+
+    }
+
+
 }
