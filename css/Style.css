@@ -14,7 +14,6 @@
     --fs-h2: clamp(2rem, 3.5vw, 4rem);
     --fs-texto: clamp(1.2rem, 2vw, 3rem);
     --fs-menu: clamp(1.5rem, 2.5vw, 2.5rem);
-    --fs-menu-hover: clamp(2rem, 3vw, 3rem);
     --fs-rodape: clamp(2.5rem, 4vw, 6rem);
 
     --largura-container: 100%;
@@ -22,14 +21,6 @@
     --altura-menu: 10rem;
     --altura-rodape: 16rem;
     --altura-mt: 3rem;
-
-    --largura-img-pequena: 38rem;
-    --altura-img-pequena: 32rem;
-    --largura-img-media: 42rem;
-    --altura-img-media: 34rem;
-
-    --largura-iframe-desktop: 100rem;
-    --altura-iframe: 20rem;
 }
 
 * {
@@ -64,22 +55,23 @@ p {
 a {
     text-decoration: none;
     color: var(--cor-branco);
-    transition: all .4s;
+    transition: transform .3s, text-decoration .3s;
 }
 
 a:hover {
-    font-size: var(--fs-menu-hover);
+    transform: scale(1.1);
     text-decoration: underline;
 }
 
 iframe {
-    width: var(--largura-iframe-desktop);
-    height: var(--altura-iframe);
+    width: 100%;
+    max-width: 100rem;
+    height: auto;
 }
 
 .Container {
     width: var(--largura-container);
-    height: var(--altura-container);
+    min-height: var(--altura-container);
 }
 
 .Branco {
@@ -96,11 +88,13 @@ iframe {
 .Sessao {
     background-color: var(--cor-branco);
     width: 90%;
-    height: 90%;
+    min-height: 90%;
     border-radius: var(--border-radius);
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 5rem;
+    margin: 5rem 0;
 }
 
 .FundoMenu {
@@ -123,6 +117,7 @@ iframe {
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 100%;
+    padding-top: 5rem;
 }
 
 .Titulo {
@@ -152,6 +147,8 @@ iframe {
 
 .ImagemTitulo img {
     width: 45%;
+    max-width: 100%;
+    height: auto;
 }
 
 .Grid {
@@ -175,9 +172,9 @@ iframe {
 }
 
 .Imagens img {
-    height: var(--altura-img-pequena);
-    width: 80%;
+    max-width: 100%;
     border-radius: var(--border-radius);
+    height: auto;
 }
 
 .SessaoGaleria {
@@ -187,6 +184,7 @@ iframe {
     align-items: center;
     gap: var(--gap-grande);
     color: var(--cor-branco);
+    padding-bottom: 5rem;
 }
 
 .SessaoGaleria h1 {
@@ -194,22 +192,21 @@ iframe {
 }
 
 .GaleriaGrid {
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
     gap: var(--gap-grande);
 }
 
 .GaleriaGrid img {
-    width: var(--largura-img-pequena);
-    height: var(--altura-img-pequena);
+    width: 30rem;
+    height: 30rem;
     border-radius: var(--border-radius);
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .GaleriaGrid img:hover {
-    width: var(--largura-img-media);
-    height: var(--altura-img-media);
+    transform: scale(1.05);
 }
 
 .HardwareGrid {
@@ -225,7 +222,8 @@ iframe {
 
 .ImagemHardware img {
     margin-top: var(--altura-mt);
-    width: 60%;
+    max-width: 60%;
+    height: auto;
     border-radius: var(--border-radius);
 }
 
@@ -235,8 +233,7 @@ iframe {
     justify-content: center;
     align-items: center;
     color: var(--cor-branco);
-
-
+    margin-bottom: 6rem;
 }
 
 .HardwareText h1 {
@@ -254,7 +251,6 @@ iframe {
 .EquipeGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     gap: var(--gap-medio);
 }
 
@@ -263,11 +259,10 @@ iframe {
     justify-content: center;
     padding-top: var(--altura-mt);
     color: var(--cor-branco);
-    
 }
 
-.ContainerEquipe{
-    height: 130vh;
+.ContainerEquipe {
+    min-height: 130vh;
 }
 
 .Membro {
@@ -287,11 +282,8 @@ iframe {
     color: var(--cor-branco);
 }
 
-.Membro p {
-    font-size: var(--fs-texto);
-}
-
-.Membro a{
+.Membro p,
+.Membro a {
     font-size: var(--fs-texto);
 }
 
@@ -300,6 +292,8 @@ iframe {
     height: 30rem;
     border-radius: var(--border-radius);
     margin-top: 2rem;
+    max-width: 100%;
+    height: auto;
 }
 
 .FundoRodape {
@@ -312,8 +306,8 @@ iframe {
 }
 
 .Rodape {
-    display: flex;
-    gap: 60rem;
+    gap: 10rem;
+    width: 100%;
 }
 
 .Rodape h1 {
@@ -333,101 +327,32 @@ iframe {
     font-size: var(--fs-rodape);
 }
 
-@media (max-width: 2560px) {
-
-    .HardwareGrid,
-    .Grid,
-    .TituloGrid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .GaleriaGrid,
-    .EquipeGrid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .Container {
-        height: var(--altura-container);
-    }
-
-    iframe {
-        width: 80rem;
-        height: 50rem;
-    }
-}
-
 @media (max-width: 1440px) {
 
-    .HardwareGrid,
-    .Grid,
-    .TituloGrid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .GaleriaGrid,
     .EquipeGrid {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .Container {
-        height: auto;
-        min-height: 100vh;
+    .ContainerEquipe {
+        min-height: 170vh;
     }
-
-    iframe {
-        width: 80rem;
-    }
-
-    .Sessao {
-        padding: 5rem;
-        margin-top: 5rem;
-        margin-bottom: 5rem;
-    }
-
-    .TituloGrid {
-        padding-top: 5rem;
-    }
-    
-    .ContainerEquipe{
-        height: 170vh;
-    }
-
 }
 
 @media (max-width: 1024px) {
 
-    .HardwareGrid,
-    .Grid,
-    .TituloGrid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .GaleriaGrid,
     .EquipeGrid {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .Container {
-        height: auto;
-        min-height: 100vh;
-    }
-
-    iframe {
-        width: 60rem;
     }
 
     .Menu {
         gap: 6rem;
     }
 
-    .SessaoGaleria {
-        padding-bottom: 5rem;
+    .ContainerEquipe {
+        min-height: 150vh;
     }
-
-    .ContainerEquipe{
-        height: 150vh;
-    }
-
 }
 
 @media (max-width: 768px) {
@@ -440,21 +365,8 @@ iframe {
         grid-template-columns: 1fr;
     }
 
-    .Container {
-        height: auto;
-        min-height: 100vh;
-    }
-
-    iframe {
-        width: 30rem;
-    }
-
     .Menu {
         gap: 4rem;
-    }
-
-    .Rodape {
-        gap: 40rem;
     }
 
     .ImagemHardware img {
@@ -469,26 +381,19 @@ iframe {
         margin-bottom: 3rem;
     }
 
-    .ContainerEquipe{
-        height: 230vh;
+    .ContainerEquipe {
+        min-height: 230vh;
     }
 
-    p{
+    p,
+    li,
+    .Membro p {
         font-size: 2rem;
     }
 
-    li{
-        font-size: 2rem;
-    }
-
-    .Membro p{
-        font-size: 2rem;
-    }
-
-    .Membro a{
+    .Membro a {
         font-size: 1.8rem;
     }
-
 }
 
 @media (max-width: 426px) {
@@ -501,26 +406,12 @@ iframe {
         grid-template-columns: 1fr;
     }
 
-    .Container {
-        height: auto;
-        min-height: 100vh;
-    }
-
-    iframe {
-        width: 20rem;
-    }
-
     .Menu {
         gap: 8px;
     }
 
-    .Rodape {
-        gap: 10rem;
-    }
-
     .GaleriaGrid img {
         width: 30rem;
-        height: 30rem;
     }
 
     .Imagens img {
@@ -528,8 +419,11 @@ iframe {
     }
 
     .ImagemHardware img {
-        height: 35rem;
         width: 30rem;
+    }
+
+    .Sessao p {
+        font-size: 2rem;
     }
 }
 
@@ -545,13 +439,14 @@ iframe {
     }
 
     .ImagemHardware img {
-        height: 33rem;
         width: 28rem;
     }
 
-    p{
-
+    .Sessao p {
+        font-size: 1rem;
     }
 
-
+    .Titulo h1 {
+        font-size: 3.5rem;
+    }
 }
