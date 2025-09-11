@@ -371,11 +371,13 @@ iframe {
         font-size: 4rem;
     }
 
-    .Membro{
+    .Membro {
         & h2 {
             font-size: 8rem;
         }
-        & p,a {
+
+        & p,
+        a {
             font-size: 4rem;
         }
     }
@@ -387,6 +389,31 @@ iframe {
     .EquipeGrid img {
         width: 35rem;
         height: 35rem;
+    }
+
+    .Imagens img {
+        height: 60rem;
+        width: 80rem;
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1999px) {
+    .Imagens img {
+        height: 30rem;
+        width: 40rem;
+    }
+
+    .GaleriaGrid {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 5rem;
+    }
+
+    .EquipeGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    iframe {
+        aspect-ratio: 2/1;
     }
 }
 
