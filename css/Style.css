@@ -132,6 +132,7 @@ iframe {
         font-size: var(--fs-h1-grande);
         margin-bottom: 1rem;
     }
+
     & p {
         font-size: var(--fs-texto);
         width: 70%;
@@ -278,9 +279,12 @@ iframe {
         margin-bottom: 1rem;
         color: var(--cor-branco);
     }
-    & p,a {
+
+    & p,
+    a {
         font-size: var(--fs-texto);
     }
+
     & img {
         width: 30rem;
         height: 30rem;
