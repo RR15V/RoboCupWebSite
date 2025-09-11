@@ -383,6 +383,11 @@ iframe {
     .EquipeGrid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .EquipeGrid img {
+        width: 35rem;
+        height: 35rem;
+    }
 }
 
 @media (max-width: 1024px) {
