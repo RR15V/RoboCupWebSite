@@ -2,7 +2,7 @@
     --cor-branco: #fff;
     --cor-preto: #000;
 
-    --border-radius: 1rem;
+    --border-radius: 3rem;
     --gap-grande: 2rem;
     --gap-medio: 1rem;
     --gap-pequeno: 0.5rem;
@@ -328,8 +328,65 @@ iframe {
     }
 }
 
-/* Media queries apenas para ajustes estruturais */
+@media (min-width: 2000px) {
+    .Menu {
+        font-size: 4rem;
+        padding: 5rem;
+    }
+
+    .FundoMenu {
+        height: auto;
+    }
+
+    .Titulo h1 {
+        font-size: 18rem;
+    }
+
+    .Sessao {
+        & h1 {
+            font-size: 12rem;
+        }
+
+        & p {
+            font-size: 4rem;
+        }
+    }
+
+    .GaleriaGrid {
+        width: 100%;
+        padding: 10rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5rem;
+    }
+
+    h1 {
+        font-size: 12rem;
+    }
+
+    p {
+        font-size: 4rem;
+    }
+
+    li {
+        font-size: 4rem;
+    }
+
+    .Membro{
+        & h2 {
+            font-size: 8rem;
+        }
+        & p,a {
+            font-size: 4rem;
+        }
+    }
+
+    .EquipeGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 1024px) {
+
     .GaleriaGrid,
     .EquipeGrid {
         grid-template-columns: repeat(2, 1fr);
@@ -342,9 +399,16 @@ iframe {
     .ContainerEquipe {
         min-height: 150vh;
     }
+
+    .GaleriaGrid img {
+        padding: 6rem;
+        width: 100%;
+        border-radius: 9rem;
+    }
 }
 
 @media (max-width: 768px) {
+
     .EquipeGrid,
     .HardwareGrid,
     .Grid,
@@ -372,12 +436,25 @@ iframe {
     .ContainerEquipe {
         min-height: 230vh;
     }
+
+    .GaleriaGrid img {
+        padding: 10rem;
+        width: 100%;
+        border-radius: 13rem;
+    }
 }
 
 @media (max-width: 426px) {
     .Menu {
         gap: 1rem;
         font-size: clamp(1.2rem, 4vw, 1.6rem);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .FundoMenu {
+        padding: 1rem;
+        height: auto;
     }
 
     .Imagens img,
@@ -388,16 +465,32 @@ iframe {
     iframe {
         aspect-ratio: 4/3;
     }
+
+    .GaleriaGrid img {
+        padding: 1rem;
+        width: 100%;
+        border-radius: var(--border-radius);
+    }
 }
 
 @media (max-width: 321px) {
     .Menu {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        padding-left: 1rem;
+    }
+
+    .FundoMenu {
+        padding: 1rem;
+        height: auto;
     }
 
     .Membro img {
         max-width: 22rem;
+    }
+
+    .GaleriaGrid img {
+        padding: 1rem;
+        width: 100%;
+        border-radius: var(--border-radius);
     }
 }
